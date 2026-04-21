@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>دعوة زفاف راقية</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Amiri&family=Tajawal&family=Aref+Ruqaa&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+    font-family: 'Tajawal', sans-serif;
+    background: #FAFAFA;
+}
+.amiri { font-family: 'Amiri', serif; }
+.ruqaa { font-family: 'Aref Ruqaa', serif; }
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.parallax {
+    background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    border-radius: 20px;
+}
+
+.btn {
+    transition: 0.3s;
+}
+.btn:hover {
+    transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<div class="max-w-2xl mx-auto p-6 text-center">
+
+<!-- آية -->
+<div class="fade-up">
+<p class="amiri text-lg text-[#556B2F] leading-8 mb-6">
+«إِذًا لَيْسَا بَعْدُ اثْنَيْنِ بَلْ جَسَدٌ وَاحِدٌ. فَالَّذِي جَمَعَهُ اللهُ لاَ يُفَرِّقُهُ إِنْسَانٌ». (مت 19: 6)
+</p>
+</div>
+
+<!-- ترحيب -->
+<div class="fade-up">
+<h2 class="text-xl mb-6 font-semibold">
+تعلن كنيسة المسيح صلاة إكليل
+</h2>
+</div>
+
+<!-- صورة -->
+<div class="parallax mb-6 fade-up"></div>
+
+<!-- أسماء -->
+<div class="fade-up">
+<h1 class="ruqaa text-4xl text-[#B8860B] mb-4">
+كيرلس & بسنت
+</h1>
+</div>
+
+<!-- نص -->
+<div class="fade-up">
+<p class="mb-6 leading-7">
+(الابن المبارك) & (الابنة المباركة)<br><br>
+وبهذه المناسبة السعيدة يتشرف كلاً من:<br>
+الأستاذ / شحات صداق سعيد، والأستاذ / نصيح مسمى سعيد،<br>
+بدعوة سيادتكم لحضور صلاة الإكليل المبارك.
+</p>
+</div>
+
+<!-- الموعد -->
+<div class="fade-up bg-white shadow rounded-xl p-4 mb-6">
+<p class="font-bold text-[#556B2F]">
+يوم الأحد 26 أبريل، الساعة الرابعة مساءً (4:00 PM)
+</p>
+</div>
+
+<!-- Countdown -->
+<div id="countdown" class="flex justify-center gap-4 text-[#B8860B] font-bold mb-8 fade-up">
+<div><span id="d">0</span><br>يوم</div>
+<div><span id="h">0</span><br>ساعة</div>
+<div><span id="m">0</span><br>دقيقة</div>
+<div><span id="s">0</span><br>ثانية</div>
+</div>
+
+<!-- أماكن -->
+<div class="grid gap-4 mb-6 fade-up">
+
+<div class="bg-white p-4 rounded-xl shadow">
+<i class="fa-solid fa-church text-[#556B2F] mb-2"></i>
+<p>كنيسة العذراء ومار بولس بالعمرانية</p>
+</div>
+
+<div class="bg-white p-4 rounded-xl shadow">
+<i class="fa-solid fa-ring text-[#B8860B] mb-2"></i>
+<p>يقام الحفل في قاعة فيلا النحاس بالمريوطية</p>
+</div>
+
+</div>
+
+<!-- خريطة -->
+<div class="fade-up mb-6">
+<iframe 
+src="https://www.google.com/maps?q=العمرانية&output=embed"
+class="w-full h-60 rounded-xl shadow">
+</iframe>
+</div>
+
+<!-- أزرار -->
+<div class="flex flex-col gap-4 fade-up">
+
+<a href="https://wa.me/201211345434"
+class="btn bg-green-600 text-white py-3 rounded-full">
+<i class="fa-brands fa-whatsapp"></i> تأكيد الحضور عبر واتساب
+</a>
+
+<button onclick="openRSVP()"
+class="btn bg-[#556B2F] text-white py-3 rounded-full">
+اكتب كلمة للعروسين
+</button>
+
+</div>
+
+<!-- نموذج -->
+<div id="rsvpBox" class="hidden mt-6 bg-white p-4 rounded-xl shadow fade-up">
+
+<input type="text" placeholder="اسمك"
+class="w-full mb-3 p-2 border rounded" id="nameInput">
+
+<textarea placeholder="اكتب كلمة للعروسين..."
+class="w-full mb-3 p-2 border rounded" rows="3" id="messageInput"></textarea>
+
+<button onclick="submitForm()"
+class="bg-[#B8860B] text-white px-4 py-2 rounded w-full">
+إرسال
+</button>
+
+<p id="successMsg" class="hidden text-green-600 mt-3">
+تم إرسال رسالتك ❤️
+</p>
+
+</div>
+
+<!-- خاتمة -->
+<p class="mt-8 text-[#556B2F] font-semibold fade-up">
+وليملأ الرب قلوبكم فرحاً
+</p>
+
+<!-- المصمم -->
+<div class="mt-10 text-sm text-gray-500 border-t pt-4">
+تصميم: kero<br>
+01211345434
+</div>
+
+</div>
+
+<script>
+// Countdown
+const target = new Date("April 26, 2026 16:00:00").getTime();
+
+setInterval(() => {
+let now = new Date().getTime();
+let diff = target - now;
+
+let d = Math.floor(diff / (1000*60*60*24));
+let h = Math.floor((diff / (1000*60*60)) % 24);
+let m = Math.floor((diff / (1000*60)) % 60);
+let s = Math.floor((diff / 1000) % 60);
+
+document.getElementById("d").innerText = d;
+document.getElementById("h").innerText = h;
+document.getElementById("m").innerText = m;
+document.getElementById("s").innerText = s;
+},1000);
+
+// Animation
+const elements = document.querySelectorAll('.fade-up');
+
+const showOnScroll = () => {
+elements.forEach(el => {
+const top = el.getBoundingClientRect().top;
+if(top < window.innerHeight - 50){
+el.classList.add('show');
+}
+});
+};
+
+window.addEventListener('scroll', showOnScroll);
+showOnScroll();
+
+// RSVP toggle
+function openRSVP(){
+document.getElementById("rsvpBox").classList.toggle("hidden");
+}
+
+// Form submit
+function submitForm(){
+let name = document.getElementById("nameInput").value;
+let message = document.getElementById("messageInput").value;
+
+if(name === "" || message === ""){
+alert("اكتب اسمك وكلمة الأول");
+return;
+}
+
+console.log("Name:", name);
+console.log("Message:", message);
+
+document.getElementById("successMsg").classList.remove("hidden");
+
+document.getElementById("nameInput").value = "";
+document.getElementById("messageInput").value = "";
+}
+</script>
+
+</body>
+</html>
