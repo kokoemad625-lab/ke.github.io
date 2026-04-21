@@ -124,13 +124,8 @@ class="w-full h-60 rounded-xl shadow">
 </iframe>
 </div>
 
-<!-- أزرار -->
+<!-- زر واحد فقط -->
 <div class="flex flex-col gap-4 fade-up">
-
-<a href="https://wa.me/201211345434"
-class="btn bg-green-600 text-white py-3 rounded-full">
-<i class="fa-brands fa-whatsapp"></i> تأكيد الحضور عبر واتساب
-</a>
 
 <button onclick="openRSVP()"
 class="btn bg-[#556B2F] text-white py-3 rounded-full">
@@ -206,12 +201,12 @@ el.classList.add('show');
 window.addEventListener('scroll', showOnScroll);
 showOnScroll();
 
-// RSVP toggle
+// Toggle
 function openRSVP(){
 document.getElementById("rsvpBox").classList.toggle("hidden");
 }
 
-// Form submit
+// Submit
 function submitForm(){
 let name = document.getElementById("nameInput").value;
 let message = document.getElementById("messageInput").value;
